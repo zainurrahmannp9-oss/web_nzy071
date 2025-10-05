@@ -1,0 +1,140 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color:#333;
+  transition: all 0.3s ease;
+}
+.navbar {
+  background: rgba(50,50,50,0.9);
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.logo {
+  font-size:1.5em;
+  font-weight:600;
+}
+.logo span { color: #ff4757; }
+.nav-links {
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+.nav-links a {
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:color 0.3s;
+}
+.nav-links a:hover { color:#ff4757; }
+.mode-btn {
+  background:#ff4757;
+  border:none;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+section { display:none; padding:20px; }
+section.active { display:block; }
+.page-title {
+  margin-bottom:20px;
+  font-size:1.8em;
+  color:#ff4757;
+}
+.profile-card {
+  max-width:350px;
+  margin:auto;
+  background: linear-gradient(135deg, #ff6b81, #ffa502);
+  color:white;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+.profile-pic {
+  border-radius:50%;
+  width:120px;
+  height:120px;
+  margin-bottom:15px;
+  border:3px solid white;
+}
+.edit-btn {
+  margin-top:15px;
+  background:white;
+  color:#ff4757;
+  border:none;
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+.post-form {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-width:500px;
+  margin:auto;
+  margin-bottom:20px;
+}
+.post-form input, .post-form textarea, .post-form button {
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+.post-form button {
+  background:#ff4757;
+  color:white;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+.posts-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+.post-card {
+  background:white;
+  border-radius:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  padding:15px;
+  position:relative;
+}
+.post-card img {
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+.post-card h3 { margin-bottom:5px; color:#333; }
+.post-card p { font-size:0.9em; color:#555; }
+.post-card button {
+  background:#ff4757;
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:0.9em;
+  margin-right:5px;
+}
+.watermark {
+  position:absolute;
+  bottom:8px;
+  right:12px;
+  font-size:12px;
+  color:rgba(0,0,0,0.4);
+}
+.dark-mode {
+  background:#1e1e1e;
+  color:#eee;
+}
+.dark-mode .navbar { background:rgba(30,30,30,0.95); }
+.dark-mode .post-card { background:#2b2b2b; color:#eee; }
